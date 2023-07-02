@@ -1,0 +1,6 @@
+# To remove the .php extension in the URLs, the footer.php and functionSubmitPost.php files was also modified to avoid redirecting to pages with the .php extension and without "/".
+RewriteEngine On
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)/?$ $1.php [L]
