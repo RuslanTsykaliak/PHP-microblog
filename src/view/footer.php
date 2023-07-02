@@ -62,8 +62,9 @@ const postsListBtn = document.getElementById('posts-list-btn');
 const footerToggleBtn = document.getElementById('footer-toggle-btn');
 const footer = document.getElementById('footer');
 
-submitPostBtn.addEventListener('click', () => window.location.href = '../view/submitPost.php');
-postsListBtn.addEventListener('click', () => window.location.href = '../view/postsList.php');
+// Removed the .php extension
+submitPostBtn.addEventListener('click', () => window.location.href = '../view/submitPost');
+postsListBtn.addEventListener('click', () => window.location.href = '../view/postsList');
 footerToggleBtn.addEventListener('click', () => {
     footer.style.display = footer.style.display === 'none' ? 'block' : 'none';
     footerToggleBtn.innerHTML = footer.style.display === 'none' ? '&#9650;' : '&#9660;';
