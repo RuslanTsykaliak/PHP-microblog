@@ -49,8 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
            $stmt2->bind_param("s", $creatorId);
            $stmt2->execute();
 
+            // Removed the .php extension
            if ($stmt->affected_rows > 0) {
-                echo "<script>window.location.href = '/view/postsList.php';</script>";
+                echo "<script>window.location.href = '/view/postsList';</script>";
             exit();
             } else {
                 echo "Error: " . $stmt->error;
