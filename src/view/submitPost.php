@@ -1,7 +1,11 @@
+<?php
+$pageTitle = "Submit Post";
+$pageDescription = "The maximum post content is limited to 255 characters";
+include 'header.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Submit Post</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>

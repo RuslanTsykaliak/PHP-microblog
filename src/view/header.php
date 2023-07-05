@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Posts List</title>
+    <title><?php echo $pageTitle ?></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
@@ -56,8 +56,8 @@
 <body>
     <div class="container">
         <div class="page-header">
-            <h1 class="page-title">Posts List</h1>
-            <p class="page-description">Browse through the list of posts</p>
+            <h1 class="page-title"><?php echo $pageTitle ?></h1>
+            <p class="page-description"><?php echo $pageDescription ?></p>
         </div>
     </div>
 </body>

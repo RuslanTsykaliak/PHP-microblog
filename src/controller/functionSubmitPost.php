@@ -27,12 +27,17 @@ function canMakePost($creatorId, $conn) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $postTitle = $_POST['post_title'];
-    $postContent = $_POST['post_content'];
+    // Against Cross-Site Scripting (XSS) attacks by escaping characters that have special meaning in HTML.
+    $postTitle = htmlspecialchars($_POST['post_title'], ENT_QUOTES, 'UTF-8');
+    $postContent = htmlspecialchars($_POST['post_content'], ENT_QUOTES, 'UTF-8');
 
     if (strlen($postContent) > 255) {
         echo "<div id='notification-message' class='notification-message'>
         <h3>Notification: The maximum post size is set to 255 characters.</h3>
+        </div>";
+    } elseif (empty($postTitle) || empty($postContent)) {
+        echo "<div id='notification-message' class='notification-message'>
+        <h3>Notification: Please enter both a post title and content.</h3>
         </div>";
     } else {
         // check if a post can be made

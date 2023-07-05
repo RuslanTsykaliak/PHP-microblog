@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['creatorId']) && isset
             echo "Error deleting post: " . $conn->error;
         }
     } else {
-        echo "Unauthorized access or post not found";
+        echo "Unauthorized access or post not found.";
     }
 } else {
     echo "Invalid request";

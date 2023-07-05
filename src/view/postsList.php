@@ -1,4 +1,6 @@
 <?php
+$pageTitle = "Posts List";
+$pageDescription = "Browse through the list of posts";
 include 'header.php';
 include '../model/connection.php'; //docker
 include '../controller/cookie.php';
@@ -45,7 +47,7 @@ $postsList->displayPosts($conn);
 ?>
 
 <div id="delete-success-message" class="delete-success-message">
-    <h3>The post was successfully deleted</h3>
+    <h3>The post was successfully deleted.</h3>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
